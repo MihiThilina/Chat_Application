@@ -13,7 +13,9 @@ public class ChatDashBoardFormController {
     public Button btnSend;
 
 
+    public void initialize(){
 
+    }
 
 
     public void onClickSendMassage(ActionEvent actionEvent) {
