@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="chatRoomPane" prefHeight="658.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatDashBoardFormController">
+   <children>
+      <TextArea fx:id="chatBoard" layoutX="45.0" layoutY="28.0" prefHeight="511.0" prefWidth="574.0" />
+      <TextField fx:id="txtSend" layoutX="45.0" layoutY="557.0" onAction="#onClickSendMassage" prefHeight="46.0" prefWidth="394.0" />
+      <Button fx:id="btnSend" layoutX="471.0" layoutY="562.0" mnemonicParsing="false" onAction="#onClickBtnSend" prefHeight="40.0" prefWidth="142.0" text="send" />
+   </children>
+</AnchorPane>
