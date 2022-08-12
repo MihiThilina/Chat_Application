@@ -21,7 +21,7 @@ public class LoginFormController {
     public void onClickLogin(ActionEvent actionEvent) throws IOException {
         userName=txtuserName.getText();
         if (userName.equals("")) {
-            new Alert(Alert.AlertType.WARNING, "Waradiii Hu**oooo!..").showAndWait();
+            new Alert(Alert.AlertType.WARNING, "Waradiii !..").showAndWait();
         }else {
             Stage stage = (Stage) txtuserName.getScene().getWindow();
             stage.close();

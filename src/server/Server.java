@@ -1,26 +1,34 @@
 package server;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Server {
+public  class Server {
+//   public static Socket accept=null;
+
+    private final ServerSocket serverSocket;
+
+    public Server(ServerSocket serverSocket) {
+        this.serverSocket = serverSocket;
+    }
+
 
 
     public static void main(String[] args) throws IOException {
-        Socket accept=null;
         ServerSocket serverSocket = new ServerSocket(8000);
         System.out.println("Server started!");
-        accept = serverSocket.accept();
-        System.out.println("Client Connected!");
-        InputStreamReader inputStreamReader = new InputStreamReader(
-                accept.getInputStream()
-        );
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        String readLine = bufferedReader.readLine();
-        System.out.println(readLine);
+        Server server = new Server(serverSocket);
+        System.out.println("Client awaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!");
+        server.serverSocket();
+        /* while(true){if(!message.equals("exit"))}*/
     }
+
+    private void serverSocket() {
+      
+    }
+
+
 }
