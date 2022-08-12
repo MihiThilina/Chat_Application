@@ -21,13 +21,27 @@ public  class Server {
         ServerSocket serverSocket = new ServerSocket(8000);
         System.out.println("Server started!");
         Server server = new Server(serverSocket);
-        System.out.println("Client awaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!");
         server.serverSocket();
-        /* while(true){if(!message.equals("exit"))}*/
+
     }
 
     private void serverSocket() {
-      
+        /* while(true){if(!message.equals("exit"))}*/
+        try {
+            while (!serverSocket.isClosed()) {
+                Socket socket = null;
+
+                socket = serverSocket.accept();
+
+                System.out.println("client has connectd");
+                ClientHandler clientHandler = new ClientHandler(socket);
+                Thread thread = new Thread(clientHandler);
+                thread.start();
+                System.out.println("Client awaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
