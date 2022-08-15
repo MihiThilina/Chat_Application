@@ -5,11 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class LoginFormController {
     public AnchorPane loginPane;
@@ -22,6 +24,7 @@ public class LoginFormController {
         userName=txtuserName.getText();
         if (userName.equals("")) {
             new Alert(Alert.AlertType.WARNING, "Waradiii !..").showAndWait();
+
         }else {
             Stage stage = (Stage) txtuserName.getScene().getWindow();
             stage.close();
