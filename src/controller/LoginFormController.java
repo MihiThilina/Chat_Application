@@ -3,10 +3,7 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -17,14 +14,18 @@ public class LoginFormController {
     public AnchorPane loginPane;
     public TextField txtuserName;
     public Button btnLogin;
-
+    private DialogPane dialog;
     static String userName;
 
     public void onClickLogin(ActionEvent actionEvent) throws IOException {
         userName=txtuserName.getText();
         if (userName.equals("")) {
-            new Alert(Alert.AlertType.WARNING, "Waradiii !..").showAndWait();
-
+//            new Alert(Alert.AlertType.WARNING, "Waradiii !..").showAndWait();
+            Alert alert = new Alert(Alert.AlertType.WARNING,"Wraddiiiii");
+            alert.showAndWait();
+//            dialog =  alert.getDialogPane();
+//            dialog.getStylesheets().add(getClass().getResource("Style.css").toString());
+//            dialog.getStyleClass().add("dialog");
         }else {
             Stage stage = (Stage) txtuserName.getScene().getWindow();
             stage.close();
