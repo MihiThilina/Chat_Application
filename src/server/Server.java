@@ -24,9 +24,7 @@ public  class Server {
         Socket accept;
 
         while(true){
-            System.out.println("Weiting for client");
             accept =serverSocket.accept();
-            System.out.println("new member coNECTD");
             ClientHandler clientHandler=new ClientHandler(accept,clientHandlers);
             clientHandlers.add(clientHandler);
             clientHandler.start();

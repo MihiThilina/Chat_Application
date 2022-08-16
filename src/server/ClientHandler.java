@@ -32,7 +32,6 @@ public class ClientHandler  extends  Thread{
                 if(massage.equalsIgnoreCase("exit")) {
                     break;
                 }
-
                 for(ClientHandler c : clientHandlers) {
                     c.printWriter.println(massage);
                 }
@@ -51,5 +50,5 @@ public class ClientHandler  extends  Thread{
             }
     }
 
-}
+        }
     }
